@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov  8 13:05:02 2021
+
+@author: Iqbal
+NAMA : IQBAL. A. MUNAWAR
+NIM : 064002100007
+"""
+def bil_prima(angka):
+    if angka > 1:
+        prima(angka)
+    else:
+        print(angka,"adalah bilangan prima")
+def prima(angka):
+    for i in range(2,angka):
+             if (angka % i) == 0:
+                 print(angka,"bukan bilangan prima")
+                 print("karena", i,"dikalikan",angka//i,"hasilnya adalah",angka)
+                 break
+
+    else:
+        print(angka,"adalah bilangan prima")
+    
+X = 1
+while X == 1 :
+    angka = int(input('masukan bilangan = '))
+    bil_prima(angka)
