@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 22 14:05:39 2021
+
+@author: Iqbal
+NAMA : IQBAL.A.MUNAWAR
+NIM : 064002100007
+"""
+
+x = int(input("masukan angka anda : "))
+z = int(input("akan di pangkatkan ke berapa: "))
+
+def pangkat(x,z):
+ 
+ if z >= 1 :
+     return x * pangkat(x, z - 1)
+ 
+ return x
+hasil = pangkat(x, z)
+print(f"hasil nya adalah = {hasil}")
