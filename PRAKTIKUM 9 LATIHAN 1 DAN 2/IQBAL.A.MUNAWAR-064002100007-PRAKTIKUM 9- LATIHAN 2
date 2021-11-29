@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 29 16:14:19 2021
+NAMA : IQBAL.A.MUNAWAR
+NIM : 064002100007
+@author: Iqbal
+"""
+
+
+print("PROGRAM MEMBUAT FILE")
+print("===============================================")
+
+title = str(input("MASUKAN JUDUL FILE:"))
+filename = (f"{title}.txt")
+f = open(filename, "w")
+f.close()
+print("===============================================")
+print(f"FILE {filename} TELAH DIBUAT!!")
+print("TEKAN B atau x untuk menghentikan program")
+print("===============================================")
+
+def write(string):
+    file = open(f"{title}.txt","w")
+    file.write(str(string))
+    file.close()
+
+def read ():
+    file = open(f"{title}.txt", "r")
+    teks = file.read()
+    print(teks)
+
+baris = True
+while baris == True:
+    isi = (input(""))
+    if isi == "B" or isi == "x":
+        print("\nTEKS TELAH TERSIMPAN")
+        baris = False
+    else:
+        write(isi)
+        read()
