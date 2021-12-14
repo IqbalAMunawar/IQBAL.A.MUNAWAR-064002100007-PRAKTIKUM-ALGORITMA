@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec 14 17:17:55 2021
+
+@author:IQBAL. A. MUNAWAR
+NIM : 064002100007
+
+"""
+
+import csv
+
+Negara = []
+
+with open('Negara.csv') as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+    for row in csv_reader:
+        Negara.append(row)
+
+print("Negara \t\t\t Ibu Kota \t Benua \t Luas \tPopulasi")
+print("-" * 52)
+
+for data in Negara:
+    print(f"{data['Negara']} \t {data['Ibu Kota']} \t {data['Benua']} \t {data['Luas']} \t {data['Populasi']}")
